@@ -45,6 +45,41 @@ class pattern:
             for j in range(i,0,-1):
                 print(j,end=" ")
             print()
+    def pattern_5(self, x):
+        for i in range(x):
+            for j in range(x-i):
+                print("*",end=" ")
+            for j in range(x+(2*i)-5):
+                print(" ",end=" ")
+            for j in range(x-i):
+                print("*",end=" ")
+            print()
+        for i in range(x):
+            for j in range(i+1):
+                print("*",end=" ")
+            for j in range(x-(2*i)+3):
+                print(" ",end=" ")
+            for j in range(i+1):
+                print("*",end=" ")
+            print()
+    def pattern_6(self, x):
+        for i in range(x):
+            for j in range(i+1):
+                print("*",end=" ")
+            for j in range(x-(2*i)+3):
+                print(" ",end=" ")
+            for j in range(i+1):
+                print("*",end=" ")
+            print()
+        for i in range(x):
+            for j in range(x-i):
+                print("*",end=" ")
+            for j in range((2*i)-5):
+                print(" ",end=" ")
+            for j in range(x-i):
+                print("*",end=" ")
+            print()
+            
 
 pattern = pattern()
 
@@ -61,6 +96,10 @@ match y:
         pattern.pattern_3(x)
     case 4:
         pattern.pattern_4(x)
+    case 5:
+        pattern.pattern_5(x)
+    case 6:
+        pattern.pattern_6(x)
     case _:
         print("Invalid pattern number")
 
